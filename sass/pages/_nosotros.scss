@@ -1,0 +1,14 @@
+
+
+//CARRUSEL
+.carrusel-contenedor {
+    max-width: 800px;
+    /* ajustá esto a tu gusto  - solamente padding de imagen - NO ANCHO*/
+    .carrus {
+        height: 500px;
+        /* altura del carrusel */
+        object-fit: cover;
+        /* evita que se deformen las imágenes */
+    }
+}
+
