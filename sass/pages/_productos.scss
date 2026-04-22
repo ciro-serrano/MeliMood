@@ -1,0 +1,148 @@
+//@use "../utilities/variables" as *;
+
+// Estilos del contenedor (Grid)
+.catalog-grid {
+    display: grid;
+    // Se adapta automáticamente: mínimo 250px por card, rellena el espacio disponible
+    gap: 15px;
+    justify-content: center;
+    justify-items: center;
+    padding: 10px;
+    max-width: 1800px;
+    margin: 0 auto;
+
+    // Mobile: 1 columna
+    grid-template-columns: repeat(2,1fr);
+    //Tablet 2 columns
+    @media (min-width: 768px){
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    // Laptop/PC: 4 columnas
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    //pantallas grandes
+    @media (min-width: 1280px) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        padding: 25px;
+    }
+    
+}
+// Estilos de la tarjeta (Flexbox)
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+    width: 100%;
+
+    .product-card img {
+        width: 100%;
+        height: 250px; // Altura fija para todas las fotos
+        object-fit: cover; // Recorta la foto para que no se deforme
+        display: block;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-image {
+        width: 100%;
+        aspect-ratio: 1 / 1; // Mantiene el cuadrado perfecto
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 4px; // Espaciado entre elementos
+
+        h3 {
+            font-size: 0.75rem;
+            margin: 0;
+            color: #333;
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .installments {
+            font-size: 0.7rem;
+            color: #666;
+            margin: 0;
+        }
+    }
+}
+//TABLETS
+@media (min-width: 768px){
+    .product-card{
+            .card-info{
+                padding: 20px;
+                gap: 8px;
+
+                h3{
+                    font-size: 1.15rem;
+                }
+                .price{
+                    font-size: 1.3rem;
+                }   
+                .installments{
+                    font-size: 1.2rem;
+                }
+            }
+    }
+}
+
+//LAPTOPS
+@media (min-width: 1024px){
+    .product-card{
+            .card-info{
+                padding: 20px;
+                gap: 8px;
+
+                h3{
+                    font-size: 1.15rem;
+                }
+                .price{
+                    font-size: 1.3rem;
+                }   
+                .installments{
+                    font-size: 1.2rem;
+                }
+            }
+    }
+}
+//PANTALLA TV
+@media (min-width:1280px){
+    .product-card{
+            .card-info{
+                padding: 20px;
+                gap: 8px;
+
+                h3{
+                    font-size: 1.15rem;
+                }
+                .price{
+                    font-size: 1.2rem;
+                }
+                .installments{
+                    font-size: 1.2rem;
+                }
+            }
+    }
+}
