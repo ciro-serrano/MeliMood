@@ -1,0 +1,162 @@
+@use "../utilities/variables" as *;
+
+// Estilos para el texto del Carrusel
+.carousel-caption {
+    bottom: 20%; // Ajusta la posición vertical
+    left: 10%; // Ajusta la posición horizontal
+
+    .subtitle {
+        font-family: $fuentePrincipal;
+        font-size: 1rem;
+        letter-spacing: 2px; // Espaciado entre letras premium
+        color: #fff;
+        margin-bottom: 0.5rem;
+    }
+
+    .title {
+        font-family: $fuentePrincipal;
+        font-size: 3rem; // Tamaño grande para PC
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.2;
+    }
+}
+
+// Estilos para los Banners Destacados (Efectos Dinámicos)
+.featured-banners {
+
+    .banner-category {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-decoration: none; // Quita el subrayado del enlace
+        display: block;
+        overflow: hidden; // Necesario para que el zoom no se salga
+        border-radius: 4px; // Bordes ligeramente redondeados como en tu imagen
+        background-color: #f8f9fa; // Fondo gris muy suave por defecto
+
+        .banner-content {
+            position: relative; // Para posicionar el texto sobre la imagen
+
+            img {
+                width: 100%;
+                order: 1;
+                height: auto;
+                // --- EFECTO DINÁMICO 1: Transición suave ---
+                transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
+                filter: grayscale(20%); // Ligero tono gris por defecto para "Quiet Luxury"
+            }
+
+            .banner-text {
+                order: 2;
+                position: static;
+                top: 50%; // Posición vertical similar a la imagen
+                left: 50%; // Posición horizontal
+                transform: translate(10%, -5%); // Esto es la clave para un centrado perfecto
+                color: $primary-color;
+                z-index: 2;
+                width: 80%;
+                padding: 1rem 0;
+                text-align: center;
+                display: flex;
+                flex-direction: column; // Apila los elementos verticalmente
+                align-items: center;    // Centra horizontalmente los elementos hijos
+                justify-content: center;
+
+
+                .action {
+                    font-family: $fuentePrincipal;
+                    font-size: 0.85rem;
+                    color: $text-muted;
+                    margin-bottom: 0.5rem;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    &:hover{
+                        border-color: $primary-color;
+                    }
+
+                    position: relative;
+                    display: block;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 0;
+                        height: 1px;
+                        bottom: -2px;
+                        left: 50%;
+                        background-color: currentColor; // Usa el color del texto
+                        transition: all 0.4s ease;
+                    }
+                }
+
+                .banner-category:hover {
+                    .banner-text {
+                        .action::after {
+                            width: 100%;
+                            left: 0;
+                        }
+                    }
+                }
+
+                .category-name {
+                    font-family: $fuentePrincipal;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    margin: 0;
+                    text-transform: uppercase;
+                    //efecto ghost button
+                    display: block;
+                    padding: 5px 15px;
+                    border: 1px solid #333;
+                    transition: all 0.4s ease;
+                    border-color: $primary-color;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        // --- EFECTOS DINÁMICOS AL HOVER (SASS Puro) ---
+        &:hover {
+            .banner-content img {
+                // --- EFECTO 2: Zoom suave ---
+                transform: scale(1.05);
+                // --- EFECTO 3: Color total ---
+                filter: grayscale(0%);
+            }
+
+            // Opcional: una sombra muy sutil para dar profundidad
+            box-shadow: 0 10px 20px rgba(53, 45, 45, 0.596);
+            transition: box-shadow 0.3s ease;
+        }
+    }
+}
+
+// Ajustes para Mobile */
+@media (max-width: 767.98px) {
+    .carousel-item {
+
+        // Aseguramos que la imagen no se estire demasiado y deje espacio
+        img {
+            height: 300px; // Altura fija para móvil, ajustable a tu gusto
+            object-fit: cover;
+        }
+    }
+
+    .carousel-caption {
+        position: relative; // Sacamos el texto del flujo absoluto
+        color: #000; // Cambiamos a negro para que resalte sobre el fondo blanco del sitio
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-shadow: none; // Quitamos la sombra, ya no hace falta
+
+        // Ajustamos tamaños de fuente para que no se vean gigantes
+        .title {
+            font-size: 1.5rem !important;
+        }
+
+        .subtitle {
+            font-size: 0.8rem !important;
+        }
+    }
+}

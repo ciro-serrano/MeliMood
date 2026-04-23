@@ -22,7 +22,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <span class="position-absolute start-50 translate-middle-x fw-bold">
-                    MeliMood  -  HOME
+                    MeliMood - HOME
                 </span>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="./index.html"><img width="100" height="auto" src="./assets/logo.png"
@@ -47,20 +47,57 @@
             </div>
         </nav>
     </header>
+    <!--Carrousel HOME-->
 
-    <main class="flex-fill">
-        <picture>
-            <div class="d-flex justify-content-space-around flex-wrap gap-3 justify-content-center">
-                <img width="1000" height="auto" src="./assets/portada1.png" class="rounded img-fluid">
-                <img width="1000" height="auto" src="./assets/portada2.png" class="rounded img-fluid">
+    <div class="container my-4">
+        <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/portadas/portada1.png" class="d-block w-100" alt="Colección Otoño">
+                    <div class="carousel-caption text-start">
+                        <p class="subtitle text-uppercase">Nueva coleccion de Otoño</p>
+                        <h2 class="title">Descubra los elementos esenciales <br>para Damas & Caballeros</h2>
+                        <div class="carousel-controls-custom">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </picture>
-        <p>
+        </div>
+    </div>
+    <main class="container my-5 featured-banners">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <a href="pages/productos.html" class="banner-category card-hombre">
+                    <div class="banner-content">
+                        <img src="assets/portadas/portada-hombre1.jpg" alt="Categoría Hombre" class="img-fluid">
+                        <div class="banner-text">
+                            <p class="action text-uppercase">Descubrir</p>
+                            <h3 class="category-name text-uppercase">HOMBRE</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6">
+                <a href="pages/productos.html" class="banner-category card-mujer">
+                    <div class="banner-content">
+                        <img src="assets/portadas/portada-mujer1.jpg" alt="Categoría Mujer" class="img-fluid">
+                        <div class="banner-text">
+                            <p class="action text-uppercase">Descubrir</p>
+                            <h3 class="category-name text-uppercase">MUJER</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!--<p> 
             aqui van todas las imagenes de personas usando ropa, de la tienda y promocionando descuentos y etc, pero no
             es un apartado de pagina , simplemente para mostrar un trailer de la tienda mediante imagenes frases,etc
-        </p>
+        </p>-->
 
-    </main>
     <!--FOOTER CREADO CON BOSTRAP5-->
     <footer class="bg-dark text-white pt-3 pb-1 mt-5">
         <div class="container">
