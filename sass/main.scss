@@ -1,8 +1,5 @@
 //sass --watch sass/main.scss styles/styles.css  esta direcion sirve para que el npm o el sass este mirando constantemente al archivo style y el main 
 
-
-//llamando a los PARTIALS archivos parciales dependientes del archivo main.scss
-
 //UTILITIES
 @use "utilities/variables";
 @use "utilities/mixins";
@@ -17,4 +14,4 @@
 @use "pages/nosotros";
 @use "pages/productos";
 @use "pages/soporte";
-
+@use "pages/galeria";
