@@ -121,3 +121,13 @@
         }
     }
 }
+
+//meida de laptop evitar cruce con barra de busqueda
+.productos {
+    .custom-title {
+        @media (min-width: 1024px) and (max-width: 1439px) {
+            top: 10%;
+            //left: 70%;
+        }
+    }
+}

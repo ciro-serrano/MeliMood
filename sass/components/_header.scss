@@ -1,0 +1,24 @@
+.navbar {
+    position: relative; // necesario para que el absolute funcione bien
+
+    .custom-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+
+        // SOLO en laptops (~1024px a 1439px)
+        @media (min-width: 1024px) and (max-width: 1439px) {
+            left: auto;
+            right: 1rem; // separa del borde
+            transform: none;
+        }
+
+        // vuelve a centrarse en pantallas grandes
+        @media (min-width: 1440px) {
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+        }
+    }
+}
