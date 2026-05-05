@@ -1,9 +1,5 @@
-//@use "../utilities/variables" as *;
-
-// Estilos del contenedor (Grid)
 .catalog-grid {
     display: grid;
-    // Se adapta automáticamente: mínimo 250px por card, rellena el espacio disponible
     gap: 15px;
     justify-content: center;
     justify-items: center;
@@ -11,27 +7,39 @@
     max-width: 1800px;
     margin: 0 auto;
 
-    // Mobile: 1 columna
-    grid-template-columns: repeat(2,1fr);
-    //Tablet 2 columns
-    @media (min-width: 768px){
-        grid-template-columns: repeat(2,1fr);
+    // Base (mobile)
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+// MEDIA QUERIES GRID
+// Tablet
+@media (min-width: 768px) {
+    .catalog-grid {
         gap: 20px;
         padding: 20px;
+        // sigue en 2 columnas
     }
-    // Laptop/PC: 4 columnas
-    @media (min-width: 1024px) {
+}
+
+// Laptop / PC
+@media (min-width: 1024px) {
+    .catalog-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-    //pantallas grandes
-    @media (min-width: 1280px) {
-        grid-template-columns: repeat(4, 1fr);
+}
+
+// Pantallas grandes
+@media (min-width: 1280px) {
+    .catalog-grid {
         gap: 25px;
         padding: 25px;
     }
-    
 }
-// Estilos de la tarjeta (Flexbox)
+
+
+
+// PRODUCT CARD
 .product-card {
     display: flex;
     flex-direction: column;
@@ -40,26 +48,26 @@
     transition: transform 0.3s ease;
     width: 100%;
 
-    .product-card img {
-        width: 100%;
-        height: 250px; // Altura fija para todas las fotos
-        object-fit: cover; // Recorta la foto para que no se deforme
-        display: block;
-    }
-
     &:hover {
         transform: translateY(-5px);
     }
 
+    img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
     .card-image {
         width: 100%;
-        aspect-ratio: 1 / 1; // Mantiene el cuadrado perfecto
+        aspect-ratio: 1 / 1;
         overflow: hidden;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
     }
 
@@ -67,7 +75,7 @@
         display: flex;
         flex-direction: column;
         padding: 10px;
-        gap: 4px; // Espaciado entre elementos
+        gap: 4px;
 
         h3 {
             font-size: 0.75rem;
@@ -88,61 +96,28 @@
         }
     }
 }
-//TABLETS
-@media (min-width: 768px){
-    .product-card{
-            .card-info{
-                padding: 20px;
-                gap: 8px;
 
-                h3{
-                    font-size: 1.15rem;
-                }
-                .price{
-                    font-size: 1.3rem;
-                }   
-                .installments{
-                    font-size: 1.2rem;
-                }
+
+
+// MEDIA QUERIES CARD
+// Tablet en adelante (acá ya cubre tablet, laptop y desktop)
+@media (min-width: 768px) {
+    .product-card {
+        .card-info {
+            padding: 20px;
+            gap: 8px;
+
+            h3 {
+                font-size: 1.15rem;
             }
-    }
-}
 
-//LAPTOPS
-@media (min-width: 1024px){
-    .product-card{
-            .card-info{
-                padding: 20px;
-                gap: 8px;
-
-                h3{
-                    font-size: 1.15rem;
-                }
-                .price{
-                    font-size: 1.3rem;
-                }   
-                .installments{
-                    font-size: 1.2rem;
-                }
+            .price {
+                font-size: 1.3rem;
             }
-    }
-}
-//PANTALLA TV
-@media (min-width:1280px){
-    .product-card{
-            .card-info{
-                padding: 20px;
-                gap: 8px;
 
-                h3{
-                    font-size: 1.15rem;
-                }
-                .price{
-                    font-size: 1.2rem;
-                }
-                .installments{
-                    font-size: 1.2rem;
-                }
+            .installments {
+                font-size: 1.2rem;
             }
+        }
     }
 }
