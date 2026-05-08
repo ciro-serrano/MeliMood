@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
@@ -29,6 +28,10 @@
     right: auto;
     transform: translateX(-50%);
   }
+}
+
+.bg-meli-mood {
+  background-color: #F8F5F2 !important;
 }
 
 .carousel-caption {
@@ -89,7 +92,7 @@
 .featured-banners .banner-category .banner-content .banner-text .action {
   font-family: Figtree;
   font-size: 0.85rem;
-  color: #6c757d;
+  color: rgba(36, 21, 4, 0.8549019608);
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -156,15 +159,73 @@
     font-size: 0.8rem !important;
   }
 }
-.carrusel-contenedor {
-  max-width: 800px;
-  /* ajustá esto a tu gusto  - solamente padding de imagen - NO ANCHO*/
+.nosotros-hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
 }
-.carrusel-contenedor .carrus {
-  height: 500px;
-  /* altura del carrusel */
-  object-fit: cover;
-  /* evita que se deformen las imágenes */
+.nosotros-hero .parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/portadas/portada2.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+.nosotros-hero .hero-content h1 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.nosotros-valores .value-card {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+.nosotros-valores .value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  border-color: #212529;
+}
+.nosotros-valores .value-card .icon-wrapper {
+  font-size: 2.5rem;
+  color: #212529;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+.nosotros-valores .value-card .icon-wrapper svg, .nosotros-valores .value-card .icon-wrapper i {
+  width: 50px;
+  height: 50px;
+}
+.nosotros-valores .value-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .nosotros-valores .value-card h2 {
+    font-size: 1rem;
+  }
+}
+.nosotros-valores .value-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
 }
 
 .catalog-grid {

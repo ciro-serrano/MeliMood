@@ -9,15 +9,18 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--LOGOS DE BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    
-        <!--SEO-->
+
+    <!--SEO-->
     <title>MeliMood | Moda Minimalista y Elegante</title>
-    <meta name="description" content="Descubra la colección exclusiva de MeliMood. Ropa minimalista y elegante para hombre y mujer. Esenciales premium diseñados para un estilo sofisticado y moderno.">
-    <meta name="keywords" content="MeliMood, moda minimalista, ropa elegante hombre, moda mujer sofisticada, estilo old money, básicos premium, tienda de ropa online, indumentaria minimalista Argentina">
+    <meta name="description"
+        content="Descubra la colección exclusiva de MeliMood. Ropa minimalista y elegante para hombre y mujer. Esenciales premium diseñados para un estilo sofisticado y moderno.">
+    <meta name="keywords"
+        content="MeliMood, moda minimalista, ropa elegante hombre, moda mujer sofisticada, estilo old money, básicos premium, tienda de ropa online, indumentaria minimalista Argentina">
     <meta name="author" content="Ciro Serrano">
     <!--OPEN GRAPH-->
     <meta property="og:title" content="MeliMood | Tienda de Moda Minimalista">
-    <meta property="og:description" content="Elevá tu guardarropa con nuestra línea de básicos premium. Calidad y simplicidad para damas y caballeros">
+    <meta property="og:description"
+        content="Elevá tu guardarropa con nuestra línea de básicos premium. Calidad y simplicidad para damas y caballeros">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://meli-mood.vercel.app/index.html">
     <meta property="og:image" content="https://meli-mood.vercel.app/assets/logo.png">
@@ -25,11 +28,12 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://meli-mood.vercel.app/index.html">
     <meta property="twitter:title" content="MeliMood | Moda Minimalista">
-    <meta property="twitter:description" content="Descubra elementos esenciales para Damas & Caballeros con una estética minimalista y elegante.">
+    <meta property="twitter:description"
+        content="Descubra elementos esenciales para Damas & Caballeros con una estética minimalista y elegante.">
     <meta property="twitter:image" content="https://meli-mood.vercel.app/assets/portadas/portada1.png">
 </head>
 
-<body>
+<body class="bg-meli-mood">
     <header> <!--NAVBAR DE BOOSTRAP-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -39,7 +43,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <span class="position-absolute custom-title fw-bold">
-                    MeliMood  -  NOSOTROS
+                    MeliMood - NOSOTROS
                 </span>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="../index.html"><img width="100" height="auto" src="../assets/logo.png"
@@ -65,46 +69,53 @@
             </div>
         </nav>
     </header>
-    <!--CARRUSEL DE DIAPOSITIVAS EN -NOSOTROS-->
-    <div id="carouselExample" class="carousel slide carrusel-contenedor carrus mx-auto">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../assets/carrus1.jpg" class="d-block w-100 carrus" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../assets/carrus2.jpg" class="d-block w-100 carrus" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../assets/carrus3.jpg" class="d-block w-100 carrus" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
+    <main> <!--NOSOTROS-->
+        <section class="nosotros-hero">
+            <div class="parallax-bg"></div>
+            <div class="hero-content">
+                <h1 class="display-4 serif">MeliMood</h1>
+                <p class="lead">La elegancia del silencio</p>
+            </div>
+        </section>
 
-    <main>
-        <section id="contacto">
-            <div class="formulario">
-                <p>
-                    en este apartado de FORMULARIO ira todo lo que es un GPS, correo, telfono, ubicacion ,mensaje etc.
-                </p>
-                <form action="">
-                    <label for="name">nombre</label>
-                    <input type="text" placeholder="tu nombre" id="name">
-                    <label for="surname">Apellido</label>
-                    <input type="text" placeholder="tu apellido" id="surname">
-                    <label for="age">edad</label>
-                    <input type="number" placeholder="ingresa tu edad" id="age">
-                    <label for="mail">correo electronico</label>
-                    <input type="email" e-Mail placeholder="tu email" id="mail">
-                </form>
+        <section class="nosotros-valores container my-5 py-5">
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-recycle"></i>
+                        </div>
+                        <h2 class="serif">Sustentabilidad</h2>
+                        <p>Materiales orgánicos de origen responsable y procesos que respetan el medio ambiente.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                            </svg>
+                            <i class="bi bi-pencil-ruler"></i>
+                        </div>
+                        <h2 class="serif">Diseño Atemporal</h2>
+                        <p>Creamos piezas que trascienden las tendencias, enfocadas en la durabilidad y el estilo.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h2 class="serif">Comunidad</h2>
+                        <p>Nuestra producción apoya el trabajo local, garantizando condiciones justas y manos expertas.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

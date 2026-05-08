@@ -1,14 +1,73 @@
 
+$primary-color: #212529;
+.nosotros-hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
 
-//CARRUSEL
-.carrusel-contenedor {
-    max-width: 800px;
-    /* ajustá esto a tu gusto  - solamente padding de imagen - NO ANCHO*/
-    .carrus {
-        height: 500px;
-        /* altura del carrusel */
-        object-fit: cover;
-        /* evita que se deformen las imágenes */
+    .parallax-bg {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: url('../../assets/portadas/portada2.png'); // Tu imagen potente aquí
+        background-attachment: fixed; // Este es el truco del parallax sin JS [cite: 182]
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+        filter: brightness(0.7); // Oscurece un poco para legibilidad [cite: 220]
+    }
+
+    .hero-content {
+        h1 { letter-spacing: 5px; text-transform: uppercase; }
     }
 }
 
+.nosotros-valores {
+    .value-card {
+        background-color: #ffffff; // Fondo blanco limpio
+        padding: 3rem 2rem;
+        border-radius: 20px; // Bordes bien redondeados y modernos
+        text-align: center;
+        height: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.05); // Borde casi invisible
+        transition: all 0.4s ease; // Transición suave para el hover
+        // Efecto de elevación al pasar el mouse
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05); // Sombra muy sutil
+            border-color: $primary-color; // Opcional: el borde se oscurece un poco
+        }
+
+        .icon-wrapper {
+            font-size: 2.5rem;
+            color: $primary-color;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            
+            svg, i {
+                // Si usas SVG, esto asegura que mantengan su proporción
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            @media (min-width: 768px) and (max-width: 991.98px) {
+            font-size: 1rem; // Se achica un poco solo en tablets para que entre "Sustentabilidad"
+            }
+        }
+        p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+    }
+}

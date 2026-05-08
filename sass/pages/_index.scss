@@ -1,5 +1,8 @@
 @use "../utilities/variables" as *;
 
+.bg-meli-mood {
+    background-color: $fondo-hueso !important; // El !important asegura que le gane a Bootstrap
+}
 // Estilos para el texto del Carrusel
 .carousel-caption {
     bottom: 20%; // Ajusta la posición vertical
