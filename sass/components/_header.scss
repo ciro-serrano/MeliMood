@@ -1,5 +1,38 @@
-.navbar {
+@use "../utilities/variables" as *;
+
+.navbar{
     position: relative; // necesario para que el absolute funcione bien
+    background-color: $fondo-hueso !important;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+    .container-fluid {
+        .navbar-collapse {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translate(-50%);
+                            width: 0;
+                            height: 0.5px;
+                            background-color: currentColor;
+                            transition: width 0.3s ease;
+                        }
+
+                        &:hover::after {
+                            width: 60%;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
 
     .custom-title {
         position: absolute;

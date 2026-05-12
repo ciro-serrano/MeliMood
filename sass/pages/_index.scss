@@ -3,31 +3,118 @@
 .bg-meli-mood {
     background-color: $fondo-hueso !important; // El !important asegura que le gane a Bootstrap
 }
-// Estilos para el texto del Carrusel
-.carousel-caption {
-    bottom: 20%; // Ajusta la posición vertical
-    left: 10%; // Ajusta la posición horizontal
 
-    .subtitle {
-        font-family: $fuentePrincipal;
-        font-size: 1rem;
-        letter-spacing: 2px; // Espaciado entre letras premium
-        color: #fff;
-        margin-bottom: 0.5rem;
+// ── Hero ──────────────────────────────────────────────
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+
+    // Imagen de fondo
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
     }
 
-    .title {
+    // Overlay degradado para legibilidad
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top,
+                rgba(0, 0, 0, 0.6) 0%,
+                rgba(0, 0, 0, 0.15) 50%,
+                rgba(0, 0, 0, 0) 100%);
+        pointer-events: none;
+    }
+
+    // Contenedor del texto
+    &__content {
+        position: absolute;
+        bottom: 12%;
+        left: 6%;
+        max-width: 520px;
+    }
+
+    // Eyebrow: línea pequeña arriba
+    &__eyebrow {
         font-family: $fuentePrincipal;
-        font-size: 3rem; // Tamaño grande para PC
+        font-size: 0.75rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 28px;
+            height: 0.5px;
+            background: rgba(255, 255, 255, 0.5);
+            flex-shrink: 0;
+        }
+    }
+
+    // Título principal
+    &__title {
+        font-family: $fuentePrincipal;
+        font-size: 3.5rem;
         font-weight: 400;
         color: #fff;
-        line-height: 1.2;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 2rem;
+
+        em {
+            font-style: italic;
+            font-weight: 300;
+        }
+    }
+
+    // CTA: link de texto con subrayado fino
+    &__cta {
+        font-family: $fuentePrincipal;
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.88);
+        text-decoration: none;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
+        padding-bottom: 3px;
+        transition: color 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+
+    // Mobile
+    @media (max-width: 767.98px) {
+        height: 70vh;
+
+        &__content {
+            bottom: 8%;
+            left: 5%;
+        }
+
+        &__title {
+            font-size: 2rem;
+        }
     }
 }
 
+
+
+
 // Estilos para los Banners Destacados (Efectos Dinámicos)
 .featured-banners {
-
     .banner-category {
         display: flex;
         flex-direction: column;
@@ -52,29 +139,33 @@
 
             .banner-text {
                 order: 2;
-                position: static;
-                top: 50%; // Posición vertical similar a la imagen
-                left: 50%; // Posición horizontal
-                transform: translate(10%, -5%); // Esto es la clave para un centrado perfecto
+                position: absolute;
+                bottom: 0;
+                //top: 50%; // Posición vertical similar a la imagen
+                left: 0; // Posición horizontal
+                right: 0;
+                transform: none;
                 color: $primary-color;
                 z-index: 2;
-                width: 80%;
-                padding: 1rem 0;
-                text-align: center;
+                width: 100%;
+                padding: 24px 22px;
+                text-align: left;
                 display: flex;
                 flex-direction: column; // Apila los elementos verticalmente
-                align-items: center;    // Centra horizontalmente los elementos hijos
+                align-items: flex-start; // Centra horizontalmente los elementos hijos
                 justify-content: center;
+                gap: 6px;
 
 
                 .action {
                     font-family: $fuentePrincipal;
-                    font-size: 0.85rem;
-                    color: $text-muted;
-                    margin-bottom: 0.5rem;
-                    letter-spacing: 2px;
+                    font-size: 0.7rem;
+                    color: rgba(255,255,255,0.65);
+                    margin-bottom: 2px;
+                    letter-spacing: 0,2rem;
                     text-transform: uppercase;
-                    &:hover{
+
+                    &:hover {
                         border-color: $primary-color;
                     }
 
@@ -87,79 +178,57 @@
                         width: 0;
                         height: 1px;
                         bottom: -2px;
-                        left: 50%;
-                        background-color: currentColor; // Usa el color del texto
+                        left: 0;
+                        background: linear-gradient(to top,
+                                rgba(0, 0, 0, 0.75) 0%,
+                                rgba(0, 0, 0, 0.1) 50%,
+                                rgba(0, 0, 0, 0) 100%
+                        );
                         transition: all 0.4s ease;
-                    }
-                }
-
-                .banner-category:hover {
-                    .banner-text {
-                        .action::after {
-                            width: 100%;
-                            left: 0;
+                        pointer-events: none;
                         }
                     }
-                }
 
-                .category-name {
-                    font-family: $fuentePrincipal;
-                    font-size: 2rem;
-                    font-weight: 400;
-                    margin: 0;
-                    text-transform: uppercase;
-                    //efecto ghost button
-                    display: block;
-                    padding: 5px 15px;
-                    border: 1px solid #333;
-                    transition: all 0.4s ease;
-                    border-color: $primary-color;
-                    margin-top: 5px;
+                    .banner-category:hover {
+                        .banner-text {
+                            .action::after {
+                                width: 100%;
+                                left: 0;
+                            }
+                        }
+                    }
+
+                    .category-name {
+                        font-family: $fuentePrincipal;
+                        font-size: 1.8rem;
+                        font-style: italic;
+                        font-weight: 400;
+                        color:#fff;
+                        letter-spacing: 0.04em;
+                        margin-top: 0;
+                        text-transform: none;
+                        //efecto ghost button
+                        display: block;
+                        padding: 0;
+                        border: none;
+                        //transition: all 0.4s ease;
+                        margin-top: 0;
+                    }
                 }
             }
-        }
 
-        // --- EFECTOS DINÁMICOS AL HOVER (SASS Puro) ---
-        &:hover {
-            .banner-content img {
-                // --- EFECTO 2: Zoom suave ---
-                transform: scale(1.05);
-                // --- EFECTO 3: Color total ---
-                filter: grayscale(0%);
+            // --- EFECTOS DINÁMICOS AL HOVER (SASS Puro) ---
+            &:hover {
+                .banner-content img {
+                    // --- EFECTO 2: Zoom suave ---
+                    transform: scale(1.05);
+                    // --- EFECTO 3: Color total ---
+                    filter: grayscale(0%);
+                }
+
+                // Opcional: una sombra muy sutil para dar profundidad
+                box-shadow: 0 10px 20px rgba(53, 45, 45, 0.596);
+                transition: box-shadow 0.3s ease;
             }
-
-            // Opcional: una sombra muy sutil para dar profundidad
-            box-shadow: 0 10px 20px rgba(53, 45, 45, 0.596);
-            transition: box-shadow 0.3s ease;
         }
     }
-}
-
-// Ajustes para Mobile 
-@media (max-width: 767.98px) {
-    .carousel-item {
-
-        // Aseguramos que la imagen no se estire demasiado y deje espacio
-        img {
-            height: 300px; // Altura fija para móvil, ajustable a tu gusto
-            object-fit: cover;
-        }
-    }
-
-    .carousel-caption {
-        position: relative; // Sacamos el texto del flujo absoluto
-        color: #000; // Cambiamos a negro para que resalte sobre el fondo blanco del sitio
-        padding-top: 15px;
-        padding-bottom: 15px;
-        text-shadow: none; // Quitamos la sombra, ya no hace falta
-
-        // Ajustamos tamaños de fuente para que no se vean gigantes
-        .title {
-            font-size: 1.5rem !important;
-        }
-
-        .subtitle {
-            font-size: 0.8rem !important;
-        }
-    }
-}

@@ -8,6 +8,25 @@
 
 .navbar {
   position: relative;
+  background-color: #F8F5F2 !important;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link {
+  position: relative;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 0;
+  height: 0.5px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link:hover::after {
+  width: 60%;
 }
 .navbar .custom-title {
   position: absolute;
@@ -34,23 +53,89 @@
   background-color: #F8F5F2 !important;
 }
 
-.carousel-caption {
-  bottom: 20%;
-  left: 10%;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
 }
-.carousel-caption .subtitle {
-  font-family: Figtree;
-  font-size: 1rem;
-  letter-spacing: 2px;
-  color: #fff;
-  margin-bottom: 0.5rem;
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
-.carousel-caption .title {
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+}
+.hero__content {
+  position: absolute;
+  bottom: 12%;
+  left: 6%;
+  max-width: 520px;
+}
+.hero__eyebrow {
   font-family: Figtree;
-  font-size: 3rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+}
+.hero__title {
+  font-family: Figtree;
+  font-size: 3.5rem;
   font-weight: 400;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+.hero__title em {
+  font-style: italic;
+  font-weight: 300;
+}
+.hero__cta {
+  font-family: Figtree;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
+  padding-bottom: 3px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.hero__cta:hover {
+  color: #fff;
+  border-color: #fff;
+}
+@media (max-width: 767.98px) {
+  .hero {
+    height: 70vh;
+  }
+  .hero__content {
+    bottom: 8%;
+    left: 5%;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
 }
 
 .featured-banners .banner-category {
@@ -75,26 +160,28 @@
 }
 .featured-banners .banner-category .banner-content .banner-text {
   order: 2;
-  position: static;
-  top: 50%;
-  left: 50%;
-  transform: translate(10%, -5%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: none;
   color: #000;
   z-index: 2;
-  width: 80%;
-  padding: 1rem 0;
-  text-align: center;
+  width: 100%;
+  padding: 24px 22px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  gap: 6px;
 }
 .featured-banners .banner-category .banner-content .banner-text .action {
   font-family: Figtree;
-  font-size: 0.85rem;
-  color: rgba(36, 21, 4, 0.8549019608);
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 2px;
+  letter-spacing: 0, 2rem;
   text-transform: uppercase;
 }
 .featured-banners .banner-category .banner-content .banner-text .action:hover {
@@ -110,9 +197,10 @@
   width: 0;
   height: 1px;
   bottom: -2px;
-  left: 50%;
-  background-color: currentColor;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
   transition: all 0.4s ease;
+  pointer-events: none;
 }
 .featured-banners .banner-category .banner-content .banner-text .banner-category:hover .banner-text .action::after {
   width: 100%;
@@ -120,16 +208,17 @@
 }
 .featured-banners .banner-category .banner-content .banner-text .category-name {
   font-family: Figtree;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-style: italic;
   font-weight: 400;
-  margin: 0;
-  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.04em;
+  margin-top: 0;
+  text-transform: none;
   display: block;
-  padding: 5px 15px;
-  border: 1px solid #333;
-  transition: all 0.4s ease;
-  border-color: #000;
-  margin-top: 5px;
+  padding: 0;
+  border: none;
+  margin-top: 0;
 }
 .featured-banners .banner-category:hover .banner-content img {
   transform: scale(1.05);
@@ -140,25 +229,6 @@
   transition: box-shadow 0.3s ease;
 }
 
-@media (max-width: 767.98px) {
-  .carousel-item img {
-    height: 300px;
-    object-fit: cover;
-  }
-  .carousel-caption {
-    position: relative;
-    color: #000;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-shadow: none;
-  }
-  .carousel-caption .title {
-    font-size: 1.5rem !important;
-  }
-  .carousel-caption .subtitle {
-    font-size: 0.8rem !important;
-  }
-}
 .nosotros-hero {
   position: relative;
   height: 60vh;
