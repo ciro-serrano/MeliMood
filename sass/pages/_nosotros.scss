@@ -13,7 +13,7 @@ $primary-color: #212529;
     .parallax-bg {
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background-image: url('../../assets/portadas/portada2.png'); // Tu imagen potente aquí
+        background-image: url('../../assets/portadas/portada2.webp'); // Tu imagen potente aquí
         background-attachment: fixed; // Este es el truco del parallax sin JS [cite: 182]
         background-position: center;
         background-size: cover;

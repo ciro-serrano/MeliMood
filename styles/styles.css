@@ -245,7 +245,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../assets/portadas/portada2.png");
+  background-image: url("../../assets/portadas/portada2.webp");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -352,6 +352,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  object-position: top;
 }
 .product-card .card-info {
   display: flex;
@@ -392,7 +393,8 @@
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .productos .custom-title {
-    top: 10%;
+    top: 60%;
+    left: 53%;
   }
 }
 
