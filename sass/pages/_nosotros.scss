@@ -13,12 +13,12 @@ $primary-color: #212529;
     .parallax-bg {
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background-image: url('../../assets/portadas/portada2.webp'); // Tu imagen potente aquí
-        background-attachment: fixed; // Este es el truco del parallax sin JS [cite: 182]
+        background-image: url('../assets/portadas/portada2.webp'); 
+        background-attachment: fixed; 
         background-position: center;
         background-size: cover;
         z-index: -1;
-        filter: brightness(0.7); // Oscurece un poco para legibilidad [cite: 220]
+        filter: brightness(0.7); 
     }
 
     .hero-content {
@@ -28,9 +28,9 @@ $primary-color: #212529;
 
 .nosotros-valores {
     .value-card {
-        background-color: #ffffff; // Fondo blanco limpio
+        background-color: #ffffff; 
         padding: 3rem 2rem;
-        border-radius: 20px; // Bordes bien redondeados y modernos
+        border-radius: 20px; 
         text-align: center;
         height: 100%;
         border: 1px solid rgba(0, 0, 0, 0.05); // Borde casi invisible
