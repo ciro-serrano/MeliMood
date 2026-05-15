@@ -9,14 +9,17 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!--LOGOS DE BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-            <!--SEO-->
+    <!--SEO-->
     <title>MeliMood | Moda Minimalista y Elegante</title>
-    <meta name="description" content="Descubra la colección exclusiva de MeliMood. Ropa minimalista y elegante para hombre y mujer. Esenciales premium diseñados para un estilo sofisticado y moderno.">
-    <meta name="keywords" content="MeliMood, moda minimalista, ropa elegante hombre, moda mujer sofisticada, estilo old money, básicos premium, tienda de ropa online, indumentaria minimalista Argentina">
+    <meta name="description"
+        content="Descubra la colección exclusiva de MeliMood. Ropa minimalista y elegante para hombre y mujer. Esenciales premium diseñados para un estilo sofisticado y moderno.">
+    <meta name="keywords"
+        content="MeliMood, moda minimalista, ropa elegante hombre, moda mujer sofisticada, estilo old money, básicos premium, tienda de ropa online, indumentaria minimalista Argentina">
     <meta name="author" content="Ciro Serrano">
     <!--OPEN GRAPH-->
     <meta property="og:title" content="MeliMood | Tienda de Moda Minimalista">
-    <meta property="og:description" content="Elevá tu guardarropa con nuestra línea de básicos premium. Calidad y simplicidad para damas y caballeros">
+    <meta property="og:description"
+        content="Elevá tu guardarropa con nuestra línea de básicos premium. Calidad y simplicidad para damas y caballeros">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://meli-mood.vercel.app/index.html">
     <meta property="og:image" content="https://meli-mood.vercel.app/assets/logo.png">
@@ -24,7 +27,8 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://meli-mood.vercel.app/index.html">
     <meta property="twitter:title" content="MeliMood | Moda Minimalista">
-    <meta property="twitter:description" content="Descubra elementos esenciales para Damas & Caballeros con una estética minimalista y elegante.">
+    <meta property="twitter:description"
+        content="Descubra elementos esenciales para Damas & Caballeros con una estética minimalista y elegante.">
     <meta property="twitter:image" content="https://meli-mood.vercel.app/assets/portadas/portada1.png">
 </head>
 
@@ -38,11 +42,11 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <span class="position-absolute custom-title fw-bold">
-                    MeliMood  -  SOPORTE
+                    MeliMood - SOPORTE
                 </span>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="../index.html"><img width="100" height="auto" src="../assets/logo.png"
-                            alt="logo principal de la tienda"></a>
+                    <a class="navbar-brand" href="../index.html"><img width="100" height="auto"
+                            src="../assets/logo-melimood.svg" alt="logo principal de la tienda"></a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../index.html">HOME</a>
@@ -65,53 +69,256 @@
         </nav>
     </header>
 
-        <main>
-            <p>
-                en este apartado va lo que vendria a ser para contactarnos a nosotros como por ejemplo via correos o
-                mediante foros o comentarios
-                ayuda y soporte
-            </p>
 
-        </main>
+    <main class="soporte-page">
 
+        <!-- HERO SOPORTE -->
+        <section class="soporte-hero">
+            <div class="soporte-hero__inner">
+                <span class="soporte-hero__label">Asistencia</span>
+                <h1 class="soporte-hero__title">¿En qué podemos<br><em>ayudarte?</em></h1>
+                <p class="soporte-hero__sub">Estamos para acompañarte en cada parte del proceso.</p>
+                <nav class="soporte-hero__anchors">
+                    <a href="#contacto">Contacto</a>
+                    <span>·</span>
+                    <a href="#faq">Preguntas frecuentes</a>
+                    <span>·</span>
+                    <a href="#ubicacion">Dónde encontrarnos</a>
+                </nav>
+            </div>
+        </section>
 
+        <!--FORMULARIO DE CONTACTO -->
+        <section id="contacto" class="soporte-section soporte-section--contacto">
+            <div class="soporte-section__wrapper">
 
-        <!--FOOTER CREADO CON BOSTRAP5-->
-        <footer class="bg-dark text-white pt-3 pb-1 mt-5">
-            <div class="container">
-                <div class="row text-center text-md-start">
+                <div class="soporte-section__heading">
+                    <span class="soporte-section__num">01</span>
+                    <h2 class="soporte-section__title">Contacto</h2>
+                    <p class="soporte-section__desc">
+                        Completá el formulario y nos pondremos en contacto contigo dentro de las próximas 24 h
+                        hábiles.
+                    </p>
+                </div>
 
-                    <!-- Marca / Descripción -->
-                    <div class="col-12 col-md-6 col-lg-4 mb-3">
-                        <h5 class="fw-bold">MeliMood</h5>
-                        <p class="small">
-                            Página web desarrollada con HTML, CSS y Bootstrap 5. Diseño moderno, rápido y responsive.
-                        </p>
+                <form class="contacto-form" action="#" method="POST" novalidate>
+
+                    <div class="contacto-form__row">
+                        <div class="contacto-form__group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="contacto-form__group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                        </div>
                     </div>
 
-                    <!-- Links -->
-                    <div class="col-md-4 mb-3">
-                        <h5 class="fw-bold">Enlaces</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="soporte.html" class="text-decoration-none text-white">Soporte</a></li>
-                            <li><a href="soporte.html" class="text-decoration-none text-white">Ayuda</a></li>
-                            <li><a href="nosotros.html"
-                                    class="text-decoration-none text-white">Contacto</a>
-                            </li>
-                        </ul>
+                    <div class="contacto-form__group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
                     </div>
 
-                    <!-- Redes -->
+                    <div class="contacto-form__group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto">
+                            <option value="" disabled selected>Seleccioná un tema</option>
+                            <option value="pedido">Estado de mi pedido</option>
+                            <option value="cambio">Cambios y devoluciones</option>
+                            <option value="talla">Guía de talles</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="contacto-form__group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos cómo podemos ayudarte…"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="contacto-form__btn" disabled>
+                        <span>Enviar mensaje</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg>
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- DIVISOR DECORATIVO -->
+        <div class="soporte-divider" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </div>
+
+        <!--FAQ — ACORDEON-->
+        <section id="faq" class="soporte-section soporte-section--faq">
+            <div class="soporte-section__wrapper">
+
+                <div class="soporte-section__heading">
+                    <span class="soporte-section__num">02</span>
+                    <h2 class="soporte-section__title">Preguntas frecuentes</h2>
+                    <p class="soporte-section__desc">
+                        Respuestas rápidas a las consultas más comunes.
+                    </p>
+                </div>
+
+                <div class="faq-accordion">
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">
+                            ¿Cuánto tarda el envío?
+                            <span class="faq-item__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq-item__answer">
+                            <p>Los envíos dentro de Argentina demoran entre 3 y 7 días hábiles según tu provincia.
+                                Para envíos al interior, el plazo puede extenderse hasta 10 días hábiles. Recibirás
+                                un número de seguimiento una vez despachado tu pedido.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">
+                            ¿Puedo cambiar o devolver un producto?
+                            <span class="faq-item__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq-item__answer">
+                            <p>Sí. Aceptamos cambios y devoluciones dentro de los 30 días corridos desde la
+                                recepción, siempre que la prenda esté sin uso, con etiquetas y en su embalaje
+                                original. Comunicate con nosotros antes de realizar el envío.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">
+                            ¿Cómo sé qué talle elegir?
+                            <span class="faq-item__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq-item__answer">
+                            <p>Cada producto tiene su guía de talles con medidas en centímetros. Te recomendamos
+                                tomarte las medidas de pecho, cintura y cadera antes de comprar. Ante cualquier
+                                duda, podés contactarnos y te asesoramos personalmente.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">
+                            ¿Qué métodos de pago aceptan?
+                            <span class="faq-item__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq-item__answer">
+                            <p>Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express),
+                                transferencia bancaria y MercadoPago. Los precios se muestran en pesos argentinos.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">
+                            ¿Hacen envíos al exterior?
+                            <span class="faq-item__icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="faq-item__answer">
+                            <p>Por el momento solo realizamos envíos dentro de la República Argentina. Estamos
+                                trabajando para ampliar nuestra cobertura próximamente.</p>
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DIVISOR-->
+        <div class="soporte-divider" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </div>
+
+        <!--MAPA y UBICACIÓN-->
+        <section id="ubicacion" class="soporte-section soporte-section--ubicacion">
+            <div class="soporte-section__wrapper">
+
+                <div class="soporte-section__heading">
+                    <span class="soporte-section__num">03</span>
+                    <h2 class="soporte-section__title">Dónde encontrarnos</h2>
+                    <p class="soporte-section__desc">
+                        Visitanos en nuestro showroom o escribinos para coordinar una cita.
+                    </p>
+                </div>
+
+                <div class="ubicacion-grid">
+
+                    <div class="ubicacion-info">
+                        <div class="ubicacion-info__item">
+                            <span class="ubicacion-info__label">Dirección</span>
+                            <p>Av. Belgrano 1250, Salta Capital<br>Salta, Argentina</p>
+                        </div>
+                        <div class="ubicacion-info__item">
+                            <span class="ubicacion-info__label">Horarios</span>
+                            <p>Lun Vie: 10:00 a 19:00<br>Sab: 10:00 a 14:00</p>
+                        </div>
+                        <div class="ubicacion-info__item">
+                            <span class="ubicacion-info__label">Teléfono</span>
+                            <p><a href="tel:+5493874000000">+54 9 387 400-0000</a></p>
+                        </div>
+                        <div class="ubicacion-info__item">
+                            <span class="ubicacion-info__label">Email</span>
+                            <p><a href="mailto:hola@melimood.com">Tiendaonline@melimood.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="ubicacion-mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5!2d-65.4117!3d-24.7829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQ2JzU4LjQiUyA2NcKwMjQnNDIuMSJX!5e0!3m2!1ses!2sar!4v1234567890"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Ubicación MeliMood"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+    <!--FOOTER CREADO CON BOSTRAP5-->
+    <footer class="bg-dark text-white pt-3 pb-1 mt-5">
+        <div class="container">
+            <div class="row text-center text-md-start">
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <h5 class="fw-bold">MeliMood</h5>
+                    <p class="small">
+                        Página web desarrollada con un Diseño moderno y responsive.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="soporte.html" class="text-decoration-none text-white">Soporte</a></li>
+                        <li><a href="soporte.html" class="text-decoration-none text-white">Ayuda</a></li>
+                        <li><a href="soporte.html" class="text-decoration-none text-white">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Redes -->
                 <div class="col-12 col-md-4 mb-3">
                     <h5 class="fw-bold">Seguinos</h5>
                     <div class="d-flex justify-content-center justify-content-md-start gap-3">
-                        <a href="#" class="text-white">
+                        <a href="https://www.facebook.com/marketplace/salta/search/?query=ropa" target="_blank" class="text-white">
                             <i class="bi bi-facebook"></i>
                         </a>
-                        <a href="#" class="text-white">
+                        <a href="https://www.instagram.com/fnb_indumentaria2/?hl=es" target="_blank" class="text-white">
                             <i class="bi bi-instagram"></i>
                         </a>
-                        <a href="#" class="text-white">
+                        <a href="https://x.com/?lang=es" target="_blank" class="text-white">
                             <i class="bi bi-twitter"></i>
                         </a>
                     </div>
@@ -121,15 +328,14 @@
 
             <hr class="border-secondary">
 
-                <!-- Copyright -->
-                <div class="text-center small">
-                    © 2026 Ciro Serrano - Todos los derechos reservados
-                </div>
+            <div class="text-center small">
+                © 2026 Ciro Serrano - Todos los derechos reservados
             </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
