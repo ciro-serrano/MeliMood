@@ -1,14 +1,17 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *; 
 
 .navbar{
     position: relative; // necesario para que el absolute funcione bien
     background-color: $fondo-hueso !important;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+    
     .container-fluid {
         .navbar-collapse {
             .navbar-nav {
                 .nav-item {
                     .nav-link {
+                        @include texto-editorial(0.75rem, 0.14em, #666);
                         position: relative;
 
                         &::after {
@@ -40,14 +43,14 @@
         transform: translateX(-50%);
         font-weight: bold;
 
-        // SOLO en laptops (~1024px a 1439px)
+
         @media (min-width: 1024px) and (max-width: 1439px) {
             left: auto;
-            right: 1rem; // separa del borde
+            right: 1rem; 
             transform: none;
         }
 
-        // vuelve a centrarse en pantallas grandes
+
         @media (min-width: 1440px) {
             left: 50%;
             right: auto;

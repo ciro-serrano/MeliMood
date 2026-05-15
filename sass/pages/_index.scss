@@ -1,7 +1,8 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
 
 .bg-meli-mood {
-    background-color: $fondo-hueso !important; // El !important asegura que le gane a Bootstrap
+    background-color: $fondo-hueso !important; 
 }
 
 // ── Hero ──────────────────────────────────────────────
@@ -41,11 +42,7 @@
 
     // Eyebrow: línea pequeña arriba
     &__eyebrow {
-        font-family: $fuentePrincipal;
-        font-size: 0.75rem;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.7);
+        @include texto-editorial(0.75rem, 0.22em, rgba(255, 255, 255, 0.7));
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
@@ -77,13 +74,8 @@
         }
     }
 
-    // CTA: link de texto con subrayado fino
     &__cta {
-        font-family: $fuentePrincipal;
-        font-size: 0.75rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.88);
+        @include texto-editorial(0.75rem, 0.2em, rgba(255, 255, 255, 0.88));
         text-decoration: none;
         border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
         padding-bottom: 3px;
@@ -113,36 +105,35 @@
 
 
 
-// Estilos para los Banners Destacados (Efectos Dinámicos)
+// Estilos para los Banners Destacados
 .featured-banners {
     .banner-category {
         display: flex;
         flex-direction: column;
         width: 100%;
-        text-decoration: none; // Quita el subrayado del enlace
+        text-decoration: none; 
         display: block;
-        overflow: hidden; // Necesario para que el zoom no se salga
-        border-radius: 4px; // Bordes ligeramente redondeados como en tu imagen
-        background-color: #f8f9fa; // Fondo gris muy suave por defecto
+        overflow: hidden; 
+        border-radius: 4px; 
+        background-color: #f8f9fa; 
 
         .banner-content {
-            position: relative; // Para posicionar el texto sobre la imagen
+            position: relative; 
 
             img {
                 width: 100%;
                 order: 1;
                 height: auto;
-                // --- EFECTO DINÁMICO 1: Transición suave ---
+
                 transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
-                filter: grayscale(20%); // Ligero tono gris por defecto para "Quiet Luxury"
+                filter: grayscale(20%); 
             }
 
             .banner-text {
                 order: 2;
                 position: absolute;
                 bottom: 0;
-                //top: 50%; // Posición vertical similar a la imagen
-                left: 0; // Posición horizontal
+                left: 0; 
                 right: 0;
                 transform: none;
                 color: $primary-color;
@@ -151,18 +142,16 @@
                 padding: 24px 22px;
                 text-align: left;
                 display: flex;
-                flex-direction: column; // Apila los elementos verticalmente
-                align-items: flex-start; // Centra horizontalmente los elementos hijos
+                flex-direction: column; 
+                align-items: flex-start;
                 justify-content: center;
                 gap: 6px;
 
 
                 .action {
-                    font-family: $fuentePrincipal;
-                    font-size: 0.7rem;
-                    color: rgba(255,255,255,0.65);
+                    @include texto-editorial(0.7rem, 0.2em, rgba(255, 255, 255, 0.65));
                     margin-bottom: 2px;
-                    letter-spacing: 0,2rem;
+                    letter-spacing: 0.2rem;
                     text-transform: uppercase;
 
                     &:hover {
@@ -207,26 +196,23 @@
                         letter-spacing: 0.04em;
                         margin-top: 0;
                         text-transform: none;
-                        //efecto ghost button
+                        
                         display: block;
                         padding: 0;
                         border: none;
-                        //transition: all 0.4s ease;
+                        
                         margin-top: 0;
                     }
                 }
             }
 
-            // --- EFECTOS DINÁMICOS AL HOVER (SASS Puro) ---
+
             &:hover {
                 .banner-content img {
-                    // --- EFECTO 2: Zoom suave ---
                     transform: scale(1.05);
-                    // --- EFECTO 3: Color total ---
                     filter: grayscale(0%);
                 }
 
-                // Opcional: una sombra muy sutil para dar profundidad
                 box-shadow: 0 10px 20px rgba(53, 45, 45, 0.596);
                 transition: box-shadow 0.3s ease;
             }

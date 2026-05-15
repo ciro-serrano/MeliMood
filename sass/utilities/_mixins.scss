@@ -1,0 +1,9 @@
+@use "variables.scss" as *;
+
+@mixin texto-editorial($size: 0.7rem, $spacing: 0.14em, $color: #666) {
+    font-family: $fuentePrincipal;
+    font-size: $size;
+    letter-spacing: $spacing;
+    text-transform: uppercase;
+    color: $color;
+}
