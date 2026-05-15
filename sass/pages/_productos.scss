@@ -68,6 +68,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            object-position: top;
         }
     }
 
@@ -100,7 +101,6 @@
 
 
 // MEDIA QUERIES CARD
-// Tablet en adelante (acá ya cubre tablet, laptop y desktop)
 @media (min-width: 768px) {
     .product-card {
         .card-info {
@@ -126,8 +126,8 @@
 .productos {
     .custom-title {
         @media (min-width: 1024px) and (max-width: 1439px) {
-            top: 10%;
-            //left: 70%;
+            top: 60%;
+            left: 53%; 
         }
     }
 }
