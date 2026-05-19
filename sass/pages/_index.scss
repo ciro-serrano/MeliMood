@@ -1,18 +1,19 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
+@use "../utilities/extend" as *;
 
 .bg-meli-mood {
     background-color: $fondo-hueso !important; 
 }
 
-// ── Hero ──────────────────────────────────────────────
+
 .hero {
     position: relative;
     width: 100%;
     height: 90vh;
     overflow: hidden;
 
-    // Imagen de fondo
+
     &__img {
         width: 100%;
         height: 100%;
@@ -21,10 +22,9 @@
         display: block;
     }
 
-    // Overlay degradado para legibilidad
+
     &__overlay {
-        position: absolute;
-        inset: 0;
+        @extend %overlay-base;
         background: linear-gradient(to top,
                 rgba(0, 0, 0, 0.6) 0%,
                 rgba(0, 0, 0, 0.15) 50%,
@@ -32,7 +32,7 @@
         pointer-events: none;
     }
 
-    // Contenedor del texto
+
     &__content {
         position: absolute;
         bottom: 12%;
@@ -40,7 +40,7 @@
         max-width: 520px;
     }
 
-    // Eyebrow: línea pequeña arriba
+
     &__eyebrow {
         @include texto-editorial(0.75rem, 0.22em, rgba(255, 255, 255, 0.7));
         margin-bottom: 1rem;
@@ -58,7 +58,6 @@
         }
     }
 
-    // Título principal
     &__title {
         font-family: $fuentePrincipal;
         font-size: 3.5rem;
@@ -102,10 +101,7 @@
     }
 }
 
-
-
-
-// Estilos para los Banners Destacados
+//banners
 .featured-banners {
     .banner-category {
         display: flex;

@@ -11,7 +11,7 @@ $color-border: #E2DDD8;
 $transition-base: 0.3s ease;
 
 
-// HERO
+
 .soporte-hero {
     background-color: $color-bg;
     padding: 7rem 2rem 5rem;
@@ -85,7 +85,7 @@ $transition-base: 0.3s ease;
 }
 
 
-// ── DIVISOR
+//  DIVISOR
 .soporte-divider {
     display: flex;
     align-items: center;
@@ -107,7 +107,7 @@ $transition-base: 0.3s ease;
 }
 
 
-// ── SECCIÓN BASE
+
 .soporte-section {
     padding: 5rem 2rem 6rem;
     background-color: $color-bg;
@@ -148,7 +148,7 @@ $transition-base: 0.3s ease;
 }
 
 
-// ── FORMULARIO
+// FORMULARIO
 .contacto-form {
     display: flex;
     flex-direction: column;
@@ -308,7 +308,7 @@ $transition-base: 0.3s ease;
 }
 
 
-//  MAPA Y UBICACIÓN
+
 .ubicacion-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;

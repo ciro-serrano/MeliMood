@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
 .navbar {
   position: relative;
   background-color: #F8F5F2 !important;
@@ -72,8 +78,6 @@
   display: block;
 }
 .hero__overlay {
-  position: absolute;
-  inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
@@ -276,11 +280,11 @@
 .nosotros-valores .value-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-  border-color: #212529;
+  border-color: #000;
 }
 .nosotros-valores .value-card .icon-wrapper {
   font-size: 2.5rem;
-  color: #212529;
+  color: #000;
   margin-bottom: 1.5rem;
   display: inline-block;
 }
